@@ -22,13 +22,17 @@ function App(){
                 setButton={setButton} 
                 button={button} 
                 show={show} setShow={setShow} 
-                counter={counter}/>   
+                counter={counter}
+            />   
+            
             <Body 
                 setAddCart={setAddCart} addCart={addCart} 
                 button={button} setCounter={setCounter} 
                 show={show} total={total} 
                 setTotal={setTotal} subTotal={subTotal} 
-                setSubTotal={setSubTotal} taxes={taxes} setTaxes={setTaxes}/>   
+                setSubTotal={setSubTotal} taxes={taxes} setTaxes={setTaxes}
+            />   
+            
             <Footer />
         </div>
     )

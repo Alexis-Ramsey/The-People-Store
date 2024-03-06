@@ -5,7 +5,7 @@ export default function Footer(){
     return(
         <div className="row footer">
             <div className="col-sm-12">
-                <h4>THE PEOPLE STORE</h4>
+                <h2> © 2024 THE PEOPLE STORE</h2>
             </div>
         </div>
 

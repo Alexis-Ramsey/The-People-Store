@@ -85,12 +85,12 @@ export default function Body(props){
                 <div className="row total ">
                     <div className="col-sm-12">
                         <h5>Total: ${(props.total).toFixed(2)}</h5>
-                        <h5>Taxes: ${(props.taxes).toFixed(2)}</h5>
-                        <h4>SubTotal: ${(props.subTotal).toFixed(2)}</h4>
+                        <h5 className='endTotal'>Taxes: ${(props.taxes).toFixed(2)}</h5>
+                        <h3>SubTotal: ${(props.subTotal).toFixed(2)}</h3>
                     </div>
                     <div className="row survey">
                         <div className="col-sm-12">
-                            <p>Thank you for shopping at The People Store. Come back to see us. Please fill out the survey at <span className='website'>www.ThePeopleStore.org</span> to get 25% off your next purchase. </p>
+                            <p>Thank you for shopping at The People Store. Come back to see us. Please fill out the survey at <span className='website'>www.ThePeopleStore/survey.org</span> to get 25% off your next purchase. </p>
                         </div>
                     </div>
                 </div>

@@ -2,7 +2,6 @@ import React from "react"
 
 export default function Checkout(props){
 
-//  console.log(props)
     //mapping through the props data to get the array inside
     const food = props.data.map(
         (currentItem)=>{
