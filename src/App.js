@@ -12,13 +12,23 @@ function App(){
     const [button, setButton] = React.useState("Close Checkout")
     const [counter, setCounter] = React.useState(0)
     const [total, setTotal] = React.useState(0)
+    const [taxes, setTaxes] = React.useState(0)
     const [subTotal, setSubTotal] = React.useState(0) 
 
 
     return(
         <div className="container">
-            <Header setButton={setButton} button={button} show={show} setShow={setShow} counter={counter}/>   
-            <Body setAddCart={setAddCart} addCart={addCart} button={button} setCounter={setCounter} show={show} total={total} setTotal={setTotal} subTotal={subTotal} setSubTotal={setSubTotal}/>   
+            <Header 
+                setButton={setButton} 
+                button={button} 
+                show={show} setShow={setShow} 
+                counter={counter}/>   
+            <Body 
+                setAddCart={setAddCart} addCart={addCart} 
+                button={button} setCounter={setCounter} 
+                show={show} total={total} 
+                setTotal={setTotal} subTotal={subTotal} 
+                setSubTotal={setSubTotal} taxes={taxes} setTaxes={setTaxes}/>   
             <Footer />
         </div>
     )

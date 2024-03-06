@@ -8,12 +8,7 @@ html, body{
 /* Header */
 
 .headerBackground{
-    background-color: rgba(0, 0, 0, 0.493);
-    /* background-image: url("https://www.rosseto.com/wp-content/uploads/2016/11/grocery-store-background.jpg");
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: 100% 20%;
-    background-position-x:center; */
+    background-color: rgba(0, 0, 0, 0.356);
 }
 
 .btnOpen{
@@ -134,7 +129,7 @@ html, body{
     border-bottom: solid black 2px;
     border-top: solid black 2px;
     background-color:burlywood;
-    color: white;
+    color: black;
 }
 
 .cart{

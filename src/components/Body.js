@@ -13,13 +13,12 @@ export default function Body(props){
 
     function Category(event){
         //creating a variable to hold the accessKey
-        
         let category = event.target.accessKey
 
         //display certain items => display filtered items
         for (let index = 0; index < ItemData.length; index++) {
            if (ItemData[index].category === category) {
-               filteredFood.push(<Itemlist setAddCart={props.setAddCart} setCounter={props.setCounter} total={props.total} setTotal={props.setTotal} subTotal={props.subTotal} setSubTotal={props.setSubTotal} picture={ItemData[index].picture} itemName={ItemData[index].itemName} price={ItemData[index].price} />)
+               filteredFood.push(<Itemlist setAddCart={props.setAddCart} setCounter={props.setCounter} total={props.total} setTotal={props.setTotal} subTotal={props.subTotal} setSubTotal={props.setSubTotal} taxes={props.taxes} setTaxes={props.setTaxes} picture={ItemData[index].picture} itemName={ItemData[index].itemName} price={ItemData[index].price} />)
            }
         }
        
@@ -28,10 +27,11 @@ export default function Body(props){
         
     }
 
+
     function AllItems(){
         const foodItems = ItemData.map(
             (currentItem) => {
-                return <Itemlist setAddCart={props.setAddCart} setCounter={props.setCounter} total={props.total} setTotal={props.setTotal} subTotal={props.subTotal} setSubTotal={props.setSubTotal} picture={currentItem.picture} itemName={currentItem.itemName} price={currentItem.price} />
+                return <Itemlist setAddCart={props.setAddCart} setCounter={props.setCounter} total={props.total} setTotal={props.setTotal} subTotal={props.subTotal} setSubTotal={props.setSubTotal} taxes={props.taxes} setTaxes={props.setTaxes} picture={currentItem.picture} itemName={currentItem.itemName} price={currentItem.price} />
             }
 
         )
@@ -42,8 +42,9 @@ export default function Body(props){
     const total = props.addCart.reduce((prevTotal, price)=>{ return prevTotal + price.price}, 0);
     props.setTotal(total)
     let subTotal = total * .07
+    props.setTaxes(subTotal)
     props.setSubTotal((total + subTotal))
-    console.log(total)
+    // console.log(total)
     
     return(
 
@@ -68,7 +69,7 @@ export default function Body(props){
                     </div>
                 </div>
                 <div className="row itemList overflow-auto h-75">
-                    <Itemlist data={filteredArray} setAddCart={props.setAddCart} setCounter={props.setCounter} total={props.total} setTotal={props.setTotal} subTotal={props.subTotal} setSubTotal={props.setSubTotal}/>
+                    <Itemlist data={filteredArray} setAddCart={props.setAddCart} setCounter={props.setCounter} total={props.total} setTotal={props.setTotal} subTotal={props.subTotal} setSubTotal={props.setSubTotal} taxes={props.taxes} setTaxes={props.setTaxes}/>
                 </div>
             </div>
             <div className={`col-sm-4 checkout   ${props.show ? "checkTrue" : "checkFalse"}`}>
@@ -84,6 +85,7 @@ export default function Body(props){
                 <div className="row total ">
                     <div className="col-sm-12">
                         <h5>Total: ${(props.total).toFixed(2)}</h5>
+                        <h5>Taxes: ${(props.taxes).toFixed(2)}</h5>
                         <h4>SubTotal: ${(props.subTotal).toFixed(2)}</h4>
                     </div>
                     <div className="row survey">

@@ -8,7 +8,7 @@ export default function ItemList(props){
         //Variable to set the props data
         const itemsArray = props.data.map(
             (foodItem) => {
-                return <FoodList TestsetAddCart={props.setAddCart} setCounter={props.setCounter} total={props.total} setTotal={props.setTotal} subTotal={props.subTotal} setSubTotal={props.setSubTotal} picture={foodItem.props.picture} itemName={foodItem.props.itemName} price={foodItem.props.price} />
+                return <FoodList TestsetAddCart={props.setAddCart} setCounter={props.setCounter} total={props.total} setTotal={props.setTotal} subTotal={props.subTotal} setSubTotal={props.setSubTotal} taxes={props.taxes} setTaxes={props.setTaxes} picture={foodItem.props.picture} itemName={foodItem.props.itemName} price={foodItem.props.price} />
             }
         )
             
@@ -25,7 +25,7 @@ export default function ItemList(props){
 
         const items = ItemData.map(
             (currentItem) => {
-                return <FoodList TestsetAddCart={props.setAddCart} setCounter={props.setCounter} total={props.total} setTotal={props.setTotal} subTotal={props.subTotal} setSubTotal={props.setSubTotal} picture={currentItem.picture} itemName={currentItem.itemName} price={currentItem.price}/>
+                return <FoodList TestsetAddCart={props.setAddCart} setCounter={props.setCounter} total={props.total} setTotal={props.setTotal} subTotal={props.subTotal} setSubTotal={props.setSubTotal} taxes={props.taxes} setTaxes={props.setTaxes} picture={currentItem.picture} itemName={currentItem.itemName} price={currentItem.price}/>
             }
         )
        

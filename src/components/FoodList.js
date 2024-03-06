@@ -1,6 +1,4 @@
 import React from "react";
-import ItemData from "./ItemData";
-import List from './CheckoutList'
 import {v4 as uuidv4} from 'uuid'
 uuidv4()
 
@@ -18,7 +16,7 @@ export default function  FoodList(props){
         };
         let price = 0;
         
-        console.log(currentItem)
+        // console.log(currentItem)
 
         price = cartItems.price + props.total
        
@@ -26,6 +24,7 @@ export default function  FoodList(props){
         //Setting the useStates
         props.setTotal(price)
         let subTotal = price * .07
+        props.setTaxes(subTotal)
         props.setSubTotal((price + subTotal))
         props.setCounter((prevCounter) =>prevCounter + 1)
         props.TestsetAddCart(prevCart => [...prevCart, cartItems])        
