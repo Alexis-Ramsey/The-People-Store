@@ -50,8 +50,8 @@ export default function Body(props){
         <div className="row">
             <div className={`col-sm-8  ${props.show ? "col-sm-12" : "col-sm-8"}`}>
                 <div className="row">
-                    <div className="col-sm-12 navbar">
-                        <ul className='navbar navbar-expand-lg navBody' >
+                    <div className="col-sm-12 navBar">
+                        <ul className= 'navbar navbar-expand-lg navBody' >
                             <li onClick={AllItems} className='nav-link'>All Items</li>
                             <li onClick={Category} accessKey="baking" className='nav-link'>Baking</li>
                             <li onClick={Category} accessKey="canned foods" className='nav-link'>Canned Foods</li>
@@ -77,14 +77,19 @@ export default function Body(props){
                         <h4>Checkout</h4>
                     </div>
                 </div>
-                <div className="row checkBackground overflow-auto h-75  ">       
+                <div className="row checkBackground overflow-auto h-50  ">       
                     <Checkout data={props.addCart} setAddCart={props.setAddCart} setCounter={props.setCounter} setTotal={props.setTotal} total={props.total} subTotal={props.subTotal} setSubTotal={props.setSubTotal}/>
                 </div>
                
                 <div className="row total ">
                     <div className="col-sm-12">
-                    <h5>Total: ${(props.total).toFixed(2)}</h5>
-                    <h4>SubTotal: ${(props.subTotal).toFixed(2)}</h4>
+                        <h5>Total: ${(props.total).toFixed(2)}</h5>
+                        <h4>SubTotal: ${(props.subTotal).toFixed(2)}</h4>
+                    </div>
+                    <div className="row survey">
+                        <div className="col-sm-12">
+                            <p>Thank you for shopping at The People Store. Come back to see us. Please fill out the survey at <span className='website'>www.ThePeopleStore.org</span> to get 25% off your next purchase. </p>
+                        </div>
                     </div>
                 </div>
             </div>

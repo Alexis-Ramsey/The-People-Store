@@ -1,17 +1,19 @@
 html, body{
-    background-color: #f1f1bd;
+    background-image: url("https://img.freepik.com/free-photo/planks-with-blurred-store-background_1253-39.jpg?size=626&ext=jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 
 
 /* Header */
 
 .headerBackground{
-    background-color: #16a573;
-    background-image: url(./components/images/headerFood.gif);
+    background-color: rgba(0, 0, 0, 0.493);
+    /* background-image: url("https://www.rosseto.com/wp-content/uploads/2016/11/grocery-store-background.jpg");
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: 50% 21%;
-    background-position-x:center;
+    background-size: 100% 20%;
+    background-position-x:center; */
 }
 
 .btnOpen{
@@ -54,7 +56,7 @@ html, body{
 }
 
 .navBody{
-    background-color: #6f1313;
+    /* background-color: #6f13134f; */
     color: #EFF8E2;
     scroll-behavior: smooth;
     /* overflow: scroll; */
@@ -63,8 +65,8 @@ html, body{
     scrollbar-width: none;
 }
 
-.navbar{
-    background-color: #24020F;
+.navBar{
+    background-color: #6f1313a6;
 }
 
 .items{
@@ -131,7 +133,7 @@ html, body{
 .checkoutBackground{
     border-bottom: solid black 2px;
     border-top: solid black 2px;
-    background-color: #6f1313;
+    background-color:burlywood;
     color: white;
 }
 
@@ -145,6 +147,17 @@ html, body{
 
 .checkFalse{
     visibility: visible;
+}
+
+.website{
+    color: blue;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.survey p{
+    margin: 70px 0 0 20px;
+
 }
 
 .foodImage img{
@@ -163,6 +176,8 @@ html, body{
     border-top: solid 2px;
     /* border-bottom: solid 2px; */
     margin-bottom: 5px;
+    background-color: burlywood;
+    height: 33.5vh;
 }
 
 /* Footer */
